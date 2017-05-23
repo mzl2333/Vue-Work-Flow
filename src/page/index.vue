@@ -10,16 +10,19 @@
   export default {
     data () {
       return {
-        lists: [
-          {
-            id: 1,
-            title: 'test title 1'
-          },
-          {
-            id: 2,
-            title: 'test title 2'
-          }
-        ]
+        lists: []
+      }
+    },
+    created () {
+      // 初始化组建数据
+      this.getData()
+    },
+    methods: {
+      getData: function () {
+        let v = this
+        v.$api.get('jd/list', {pageNum: 1, pageSize: 100}, function (data) {
+          console.log(data)
+        })
       }
     }
   }
