@@ -4,23 +4,8 @@
 let root = 'http://api.smarthr.motouat.com.cn'
 let request = require('superagent')
 // 自定义判断元素类型JS
-function toType (obj) {
+function toType(obj) {
   return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
-}
-// 参数过滤函数
-function filterNull (o) {
-  for (var key in o) {
-    if (o[key] === null) {
-      delete o[key]
-    }
-    if (toType(o[key]) === 'string') {
-      o[key] = o[key].trim()
-      if (o[key].length === 0) {
-        delete o[key]
-      }
-    }
-  }
-  return o
 }
 /*
  接口处理函数
@@ -29,18 +14,15 @@ function filterNull (o) {
  需要根据接口的参数进行调整。参考说明文档地址：
  https://cnodejs.org/topic/5378720ed6e2d16149fa16bd
  */
-function apiBase (method, url, params, success, failure) {
+function apiBase(method, url, params, success, failure) {
   var r = request(method, url).type('text/plain')
-  if (params) {
-    params = filterNull(params)
-    if (method === 'POST' || method === 'PUT') {
-      if (toType(params) === 'object') {
-        params = JSON.stringify(params)
-      }
-      r = r.send(params)
-    } else if (method === 'GET' || method === 'DELETE') {
-      r = r.query(params)
+  if (method === 'POST' || method === 'PUT') {
+    if (toType(params) === 'object') {
+      params = JSON.stringify(params)
     }
+    r = r.send(params)
+  } else if (method === 'GET' || method === 'DELETE') {
+    r = r.query(params)
   }
   r.end(function (err, res) {
     if (err) {
