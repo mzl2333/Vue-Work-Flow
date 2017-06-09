@@ -1,14 +1,53 @@
 <template>
   <div id="app">
-    <router-link to="/">Index</router-link>
-    <router-link to="Content">Content</router-link>
-    <router-view></router-view>
+    <div class="header">
+      <div class="container">
+        <el-row>
+          <el-col :span="12">Logo</el-col>
+          <el-col :span="12">menu</el-col>
+        </el-row>
+      </div>
+    </div>
+    <div class="main-body">
+      <div class="container">
+        <el-row>
+            <el-col :span="8">
+              <el-menu default-active="2" router @open="handleOpen" @close="handleClose">
+                <el-submenu index="1">
+                  <template slot="title"><i class="el-icon-message"></i>导航一</template>
+                  <el-menu-item index="/">Index</el-menu-item>
+                  <el-menu-item index="Content">Content</el-menu-item>
+                  <el-menu-item index="1-3">选项3</el-menu-item>
+                </el-submenu>
+                <el-menu-item index="2"><i class="el-icon-menu"></i>导航二</el-menu-item>
+                <el-menu-item index="3"><i class="el-icon-setting"></i>导航三</el-menu-item>
+              </el-menu>
+            </el-col>
+            <el-col :span="16">
+              <router-view></router-view>
+            </el-col>
+        </el-row>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+  import ElCol from "element-ui/packages/col/src/col";
+  import ElRow from "element-ui/packages/row/src/row";
   export default {
-    name: 'app'
+    components: {
+      ElRow,
+      ElCol},
+    name: 'app',
+    methods: {
+      handleOpen: function () {
+
+      },
+      handleClose: function () {
+
+      }
+    }
   }
 </script>
 
@@ -20,6 +59,18 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    background: #D3DCE6;
+  }
+  .header {
+    height: 80px;
+    background-color: #20A0FF;
+  }
+  .container {
+    width: 1140px;
+    padding: 0 30px;
+    margin: 0 auto;
+    .el-row {
+      margin-left: -30px;
+    }
   }
 </style>
