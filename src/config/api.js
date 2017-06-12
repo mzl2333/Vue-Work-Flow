@@ -1,7 +1,7 @@
 /**
  * Created by muzl3 on 2017/5/23.
  */
-let root = 'http://api.smarthr.motouat.com.cn'
+let root = ''
 let request = require('superagent')
 // 自定义判断元素类型JS
 function toType(obj) {
