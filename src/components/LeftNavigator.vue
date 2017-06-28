@@ -35,3 +35,9 @@
     }
   }
 </script>
+<style lang="scss" scope>
+  .el-menu-item {
+    height: 50px!important;
+    line-height: 50px!important;
+  }
+</style>

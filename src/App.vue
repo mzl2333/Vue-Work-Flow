@@ -1,15 +1,12 @@
 <template>
   <div id="app">
     <div class="header">
-      <div class="container">
         <el-row>
           <el-col :span="4">Logo</el-col>
           <el-col :span="20">menu</el-col>
         </el-row>
-      </div>
     </div>
     <div class="main-body">
-      <div class="container">
         <el-row>
             <el-col :span="4">
               <LeftNavigator></LeftNavigator>
@@ -18,7 +15,6 @@
               <router-view></router-view>
             </el-col>
         </el-row>
-      </div>
     </div>
   </div>
 </template>
@@ -45,17 +41,16 @@
     text-align: center;
     color: #2c3e50;
     background: #D3DCE6;
-  }
-  .header {
-    height: 80px;
-    background-color: #20A0FF;
-  }
-  .container {
-    width: 1140px;
-    padding: 0 30px;
-    margin: 0 auto;
-    .el-row {
-      margin-left: -30px;
+    .header {
+      position: fixed;
+      z-index: 1010;
+      top: 0;
+      width: 100%;
+      height: 80px;
+      background-color: #20A0FF;
+    }
+    .main-body {
+      margin-top: 80px;
     }
   }
 </style>
