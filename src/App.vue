@@ -3,8 +3,8 @@
     <div class="header">
       <div class="container">
         <el-row>
-          <el-col :span="12">Logo</el-col>
-          <el-col :span="12">menu</el-col>
+          <el-col :span="4">Logo</el-col>
+          <el-col :span="20">menu</el-col>
         </el-row>
       </div>
     </div>

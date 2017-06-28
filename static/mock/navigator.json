@@ -1,7 +1,7 @@
 [
   {
     "title": "简历搜索",
-    "fa": "fa-search",
+    "fa": "el-icon-search",
     "id": "resume_search",
     "targetId": "",
     "hasSub": false,
@@ -10,7 +10,7 @@
   },
   {
     "title": "简历上传",
-    "fa": "fa-upload",
+    "fa": "el-icon-upload2",
     "id": "resume_upload",
     "targetId": "",
     "hasSub": false,
@@ -19,7 +19,7 @@
   },
   {
     "title": "面试列表",
-    "fa": "fa-clipboard",
+    "fa": "el-icon-menu",
     "id": "interview_list",
     "targetId": "",
     "hasSub": false,
@@ -28,7 +28,7 @@
   },
   {
     "title": "人才分析",
-    "fa": "fa-dashboard",
+    "fa": "el-icon-information",
     "id": "talent_analysis",
     "targetId": "",
     "hasSub": false,
@@ -37,7 +37,7 @@
   },
   {
     "title": "智能推荐",
-    "fa": "fa-thumbs-up",
+    "fa": "el-icon-view",
     "id": "intelligent_recommend",
     "targetId": "",
     "hasSub": false,
@@ -45,8 +45,8 @@
     "sub": []
   },
   {
-    "title": "JD维护",
-    "fa": "fa-th",
+    "title": "J D 维护",
+    "fa": "el-icon-setting",
     "id": "maintain_jd",
     "targetId": "",
     "hasSub": false,
@@ -55,7 +55,7 @@
   },
   {
     "title": "职位设定",
-    "fa": "fa-th-large",
+    "fa": "el-icon-more",
     "id": "position_setting",
     "targetId": "",
     "hasSub": false,
@@ -63,7 +63,7 @@
     "sub": []
   },
   {
-    "title": "用户权限",
+    "title": "用户管理",
     "fa": "fa-users",
     "id": "",
     "targetId": "",
@@ -71,30 +71,30 @@
     "temp": "",
     "sub": [
       {
-        "title": "用户管理",
-        "fa": "fa-user",
+        "title": "账户管理",
+        "fa": "el-icon-setting",
         "id": "user_setting",
         "targetId": "",
         "hasSub": false,
-        "temp": "user/user",
+        "temp": "user",
         "sub": null
       },
       {
         "title": "角色管理",
-        "fa": "fa-building-o",
+        "fa": "el-icon-setting",
         "id": "role_setting",
         "targetId": "",
         "hasSub": false,
-        "temp": "user/role",
+        "temp": "role",
         "sub": null
       },
       {
         "title": "权限管理",
-        "fa": "fa-cogs",
+        "fa": "el-icon-setting",
         "id": "auth_setting",
         "targetId": "",
         "hasSub": false,
-        "temp": "user/authority",
+        "temp": "authority",
         "sub": null
       }
     ]

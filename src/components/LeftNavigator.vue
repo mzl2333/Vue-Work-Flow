@@ -1,13 +1,14 @@
 <template>
-  <el-menu default-active="/" router unique-opened="true">
-    <el-menu-item v-for="item in lists" :key="item.id" :index="item.temp" v-text="item.title"></el-menu-item>
-    <!--<el-menu-item index="upload">简历上传</el-menu-item>-->
-    <!--<el-submenu index="">-->
-      <!--<template slot="title"><i class="el-icon-setting"></i>用户管理</template>-->
-      <!--<el-menu-item index="">账号管理</el-menu-item>-->
-      <!--<el-menu-item index="">角色管理</el-menu-item>-->
-      <!--<el-menu-item index="">权限管理</el-menu-item>-->
-    <!--</el-submenu>-->
+  <el-menu default-active="/" router>
+    <el-menu-item v-for="item in lists" :key="item.id" :index="item.temp" v-if="item.sub.length === 0">
+      <i :class="item.fa"></i>{{item.title}}
+    </el-menu-item>
+    <el-submenu v-for="item in lists" :key="item.id" v-if="item.sub.length != 0" index="">
+      <template slot="title"><i class="el-icon-setting"></i>{{item.title}}</template>
+      <el-menu-item v-for="sub in item.sub" :key="sub.id" :index="sub.temp">
+        <i :class="sub.fa"></i>{{sub.title}}
+      </el-menu-item>
+    </el-submenu>
   </el-menu>
 </template>
 
