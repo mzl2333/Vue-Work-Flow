@@ -9,7 +9,7 @@ import maintainJD from '@/page/maintainJD.vue'
 import positionSetting from '@/page/positionSetting.vue'
 import user from '@/page/userManage/user.vue'
 import role from '@/page/userManage/role.vue'
-import authority from '@/page/userManage/authority.vue'
+import authority from '@/page/userManage/auth.vue'
 
 Vue.use(Router)
 
