@@ -18,7 +18,7 @@
     name: 'LeftNavigator',
     componentName: 'LeftNavigator',
     created () {
-      this.testGetData();
+      this.getNavData();
     },
     data () {
       return {
@@ -26,7 +26,7 @@
       }
     },
     methods: {
-        testGetData: function () {
+      getNavData: function () {
           let v = this;
           v.$api.get('static/mock/navigator.json', {}, function (r) {
               v.lists = r;
