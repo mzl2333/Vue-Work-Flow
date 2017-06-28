@@ -5,7 +5,7 @@
     "id": "resume_search",
     "targetId": "",
     "hasSub": false,
-    "index": "search",
+    "temp": "/",
     "sub": []
   },
   {
@@ -14,7 +14,7 @@
     "id": "resume_upload",
     "targetId": "",
     "hasSub": false,
-    "index": "upload",
+    "temp": "upload",
     "sub": []
   },
   {
@@ -23,7 +23,7 @@
     "id": "interview_list",
     "targetId": "",
     "hasSub": false,
-    "index": "interview",
+    "temp": "interview",
     "sub": []
   },
   {
@@ -32,7 +32,7 @@
     "id": "talent_analysis",
     "targetId": "",
     "hasSub": false,
-    "index": "analysis",
+    "temp": "analysis",
     "sub": []
   },
   {
@@ -41,7 +41,7 @@
     "id": "intelligent_recommend",
     "targetId": "",
     "hasSub": false,
-    "index": "recommend",
+    "temp": "recommend",
     "sub": []
   },
   {
@@ -50,7 +50,7 @@
     "id": "maintain_jd",
     "targetId": "",
     "hasSub": false,
-    "index": "maintainJD",
+    "temp": "maintainJD",
     "sub": []
   },
   {
@@ -59,7 +59,7 @@
     "id": "position_setting",
     "targetId": "",
     "hasSub": false,
-    "index": "positionSetting",
+    "temp": "positionSetting",
     "sub": []
   },
   {
@@ -68,7 +68,7 @@
     "id": "",
     "targetId": "",
     "hasSub": true,
-    "index": "",
+    "temp": "",
     "sub": [
       {
         "title": "用户管理",
@@ -76,7 +76,7 @@
         "id": "user_setting",
         "targetId": "",
         "hasSub": false,
-        "index": "user/user",
+        "temp": "user/user",
         "sub": null
       },
       {
@@ -85,7 +85,7 @@
         "id": "role_setting",
         "targetId": "",
         "hasSub": false,
-        "index": "user/role",
+        "temp": "user/role",
         "sub": null
       },
       {
@@ -94,7 +94,7 @@
         "id": "auth_setting",
         "targetId": "",
         "hasSub": false,
-        "index": "user/authority",
+        "temp": "user/authority",
         "sub": null
       }
     ]
