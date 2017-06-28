@@ -1,7 +1,7 @@
 /**
  * Created by muzl3 on 2017/5/23.
  */
-let root = ''
+let root = 'http://localhost:9000'
 let request = require('superagent')
 // 自定义判断元素类型JS
 function toType(obj) {
@@ -29,7 +29,7 @@ function apiBase(method, url, params, success, failure) {
       alert('api error, HTTP CODE: ' + res.status)
       return
     }
-    if (res.body.success === true) {
+    if (res.status === 200) {
       if (success) {
         success(res.body)
       }
